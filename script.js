@@ -1,27 +1,24 @@
 const translations = {
+    de: {
+        title: "Zakir Ufuk Ören",
+        tagline: "B.Eng. IoT | M.Sc. Wirtschaftsinformatik Student",
+        bio: "Spezialisiert auf IoT, digitale Energiewende und Smart Grid Management. Mit Leidenschaft an der Schnittstelle von Technik, Erneuerbaren Energien und Wirtschaftsinformatik.",
+        btn_linkedin: "LinkedIn",
+        btn_email: "Kontaktieren Sie mich"
+    },
     en: {
-        title: "Zakir Ufuk Sahiner",
-        tagline: "Developer & M.Sc Business Informatics Student",
-        bio: "Hello! I'm Ufuk. I work on technology, software, and digitalisation projects. To learn more about me and my work, please use the links below or contact me.",
-        btn_github: "GitHub",
+        title: "Zakir Ufuk Oren",
+        tagline: "B.Eng. IoT | M.Sc. Business Informatics Student",
+        bio: "Specializing in IoT, digital energy transition, and smart grid management. Passionate about driving renewable energy solutions at the intersection of technology and business informatics.",
         btn_linkedin: "LinkedIn",
         btn_email: "Contact Me"
     },
     tr: {
-        title: "Zakir Ufuk Şahiner",
-        tagline: "Geliştirici & M.Scİşletmenin Bilgisayar Mühendisliği Öğrencisi",
-        bio: "Merhaba! Ben Ufuk. Teknoloji, yazılım ve dijitalleşme projeleri üzerine çalışıyorum. Benimle ilgili daha fazla bilgi almak için lütfen aşağıdaki bağlantıları kullanın veya benimle iletişime geçin .",
-        btn_github: "GitHub",
+        title: "Zakir Ufuk Ören",
+        tagline: "B.Eng. IoT | M.Sc. Wirtschaftsinformatik Öğrencisi",
+        bio: "IoT, dijital enerji dönüşümü ve akıllı şebeke (smart grid) yönetim sistemleri üzerine odaklanıyorum. Yenilenebilir enerji ve bilişim sistemlerinin kesişim noktasında yenilikçi çözümler üretiyorum.",
         btn_linkedin: "LinkedIn",
-        btn_email: "Bana Ulaş"
-    },
-    de: {
-        title: "Zakir Ufuk Sahiner",
-        tagline: "Entwickler & M.Sc Wirtschaftsinformatik Student",
-        bio: "Hallo! Ich bin Ufuk. Ich arbeite an Technologie, Software und digitalisierung Projekten der nächsten Generation. Um mehr über mich und meinen Projekten zu erfahren, nutzen Sie bitte die Links unten oder kontaktieren Sie mich .",
-        btn_github: "GitHub",
-        btn_linkedin: "LinkedIn",
-        btn_email: "Kontaktieren Sie mich"
+        btn_email: "İletişime Geç"
     }
 };
 
@@ -46,27 +43,19 @@ function setLanguage(lang) {
         }
     });
 
-    // Update active state in selector (if using buttons)
-    // document.querySelectorAll('.lang-btn').forEach(btn => {
-    //     btn.classList.remove('active');
-    //     if (btn.getAttribute('onclick').includes(lang)) {
-    //         btn.classList.add('active');
-    //     }
-    // });
-
     // Update dropdown button text
     const langBtn = document.getElementById('current-lang-btn');
     if (langBtn) {
         const flags = {
+            'de': '🇩🇪',
             'en': '🇬🇧',
-            'tr': '🇹🇷',
-            'de': '🇩🇪'
+            'tr': '🇹🇷'
         };
         langBtn.textContent = flags[lang];
     }
 }
 
-// Set default language to English
+// Set default language to German (for German job target)
 document.addEventListener('DOMContentLoaded', () => {
-    setLanguage('en');
+    setLanguage('de');
 });
